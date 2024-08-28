@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fundamentals of HTML</title>
+        <!--
+        <style>
+            body {background-color: powderblue;}
+            h1   {color: blue;}
+            p    {color: red;}
+            </style>
+            This is Internal CSS used for styling all the h1 tags and p tags in the page.
+        -->
+        <!--
+             <link rel="stylesheet" href="styles.css">
+             This is External CSS used for applying CSS to the page with an additional file. File destination is defined at href.
+        -->
+        <link rel="icon" type="image/x-icon" href="CognineLogo.png">
+    </head>
+    <body>
+        <h1 id="h1">Heading 1</h1> <!--Defining bookmark in a page using id attribute-->
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+        <p>Paragraph</p>
+        <a href="https://cognine.com/">Link</a> <br>  <!--href is the destination of the link -->
+        <img src="CognineLogo.png" alt="Cognine Logo" >
+        <p style="color:red;">Paragraph tag using "style" attribute.</p>
+        <p title="Tooltip displaed by title attribute.">Mouse over this paragraph, to display the title attribute as a tooltip.</p>
+        <hr>
+        <p>Text divided by the line using "hr" tag</p>
+        <hr>
+        <p>This is<br>a paragraph<br>with line breaks. using "br" tag</p>
+        <pre>This is
+        a paragraph using "pre" tag.
+
+        This will preserve both spaces and line breaks without using any empty element tags.
+        </pre>
+        <hr>
+        <h3 style="color: olive;"><ins>Formatting Elements:</ins></h3>
+        <p><b>Bold text using "b" tag</b></p>
+        <p><i>Italic text using "i" tag</i></p>
+        <p>Text with<sub> subscript using "sub" tag</sub> and <sup>superscript using "sup" tag</sup></p>
+        <p><strong>Important text using"strong" tag</strong></p> <!--This is taking same font weight as bold text (700)-->
+        <p><em>Emphasized text using "em" tag</em></p> <!--This is taking font stype as italic-->
+        <p><mark>Marked text with "mark" tag</mark></p>
+        <p><small>Smaller text using "small" tag</small></p>
+        <p><del>Deleted text with "del" tag</del></p>
+        <p><ins>Inserted text using "ins" tag</ins></p>
+        <bdo dir="rtl">This line will be written from right to left</bdo>
+        <p><bdo dir="ltr">ABOVE LINE used "bdo" tag with "dir" attribute</bdo></p>
+        <hr>
+        <h3>COLOR:</h3>
+        <p style="color: blue;">Content using style attribute with color</p>
+        <p style="background-color: blue;">Content using style attribute with background color</p>
+        <p style="border: solid 2px blue;">Content using style attribute with border color</p>
+        <p style="background-color:rgb(255, 99, 71);">Background color using rgb</p>
+        <p style="background-color:#ff6347;">Background color using HEX(#)</p>
+        <p style="background-color:hsl(9, 100%, 64%);">Background color using hsl</p>
+        <hr>
+        <h3>HTML - CSS:</h3>
+        <p style="color:blue;">Applying style using Inline CSS style attribute</p>
+        <hr>
+        <h3>HTML -Links:</h3>
+        <h4>Target attribute in "a" tag:</h4>
+        <p><a href="https://cognine.com/" target="_self">target attribute with _self value. Opens the document in the same window/tab on click.</a></p>
+        <p><a href="https://cognine.com/" target="_blank">target attribute with _blank value. Opens the document in a new window/tab.</a></p>
+        <p><a href="https://cognine.com/" target="_parent">target attribute with _blank value. Opens the document in the parent frame.</a></p>
+        <p><a href="https://cognine.com/" target="_top">target attribute with _blank value. Opens the document in the full body of the window.</a></p>
+        <a href="https://cognine.com/">
+            <img src="./CognineLogo.png" alt="Cognine Logo">
+        </a>
+        <p><a href="mailto:bhudevi.dobbala@gamil.com">Send email using mailto in href</a></p>
+        <p><button onclick="document.location='https://cognine.com/'" title="navigates to cognine page">Navigation using button click</button></p>
+        <p><a href="#h1">Jumps to H1 as it's id is added to href of this tag. This is called link Bookmark.</a></p> <!--Link to bookmark using href-->
+        <img src="AnimatedImage.gif" alt="Animated Image" style="width:48px;height:48px;float: right;" title="html allows animated images. Used float in style attribute">
+        <hr>
+        <h2>Image Maps: using map tag to navigate to differnt pages based on the area clicked in the image.</h2>
+        <p>Click on the computer, the phone, or the cup of coffee to go to a new page:</p>
+        <!--The usemap and name in the map tag has to be same-->
+        <img src="ImageMap.jpg" alt="Workplace" usemap="#imageMap" width="400" height="379">
+        <map name="imageMap">
+            <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.jpg">
+            <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.jpg">
+            <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.jpg" onclick="myFunction()" title="clicking on this will trigger a function and opens an alert popup">
+        </map>
+        <script>
+            function myFunction() {
+              alert("Triggering function on clicking the coffee cup!");
+            }
+            </script>
+    </body>
+</html> 
