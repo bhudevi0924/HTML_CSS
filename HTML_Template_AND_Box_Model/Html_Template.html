@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <style>
+            p{
+                background-color: lightgrey;
+                width: 300px;
+                border: 15px solid blue;
+                padding: 50px;
+                margin: 20px;
+            }
+        </style>
+    </head>
     <body>
         <h1>The template Element</h1>
         <button onclick="showContent()">Show hidden content</button>
         <template>
-            <h4>Hidden Content:</h4>
+            <h4>Hidden Content: <h5>(Displaying content using box model.)</h5></h4>
             <p>This content is shown by handling the template with onclick function.</p>
         </template>
         <script>
