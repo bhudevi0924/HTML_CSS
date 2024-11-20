@@ -1,0 +1,87 @@
+// Variables
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$text-color: #333;
+$padding: 16px;
+$margin: 10px;
+$border-radius: 8px;
+
+// Mixins
+@mixin flex-center($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin card-style($bg-color) {
+  background-color: $bg-color;
+  padding: $padding;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+// Base Styles
+body {
+  font-family: Arial, sans-serif;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  margin: 0;
+  padding: $padding / 2; // Using division operator
+}
+
+// Header Module
+.main-header {
+  background-color: $primary-color;
+  color: white;
+
+  .title {
+    padding: $padding;
+    text-align: center;
+  }
+
+  .nav {
+    @include flex-center(row);
+
+    ul {
+      list-style: none;
+      display: flex;
+      gap: $margin;
+
+      li {
+        a {
+          color: white;
+          text-decoration: none;
+          padding: $padding / 2;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Card Module
+.card {
+  @include flex-center(column);
+  @include card-style(#f9f9f9);
+  margin: $margin;
+
+  &.primary-card {
+    @extend .card; // Inheritance
+    background-color: $primary-color;
+    color: white;
+  }
+
+  &.secondary-card {
+    @extend .card;
+    background-color: $secondary-color;
+    color: white;
+  }
+}

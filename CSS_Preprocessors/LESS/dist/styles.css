@@ -1,0 +1,101 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+header.nav {
+  background-color: #4CAF50;
+  padding: 10px;
+}
+header.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+header.nav ul li {
+  color: white;
+  font-weight: bold;
+}
+main.container {
+  padding: 20px;
+}
+main.container section.box {
+  border: 1px solid #4CAF50;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #d9eeda;
+}
+main.container section.theme {
+  margin-top: 20px;
+}
+main.container section.theme .button {
+  background-color: #2196F3;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+main.container section.theme .button:hover {
+  background-color: #0c7cd5;
+}
+main.container section.button-map {
+  margin-top: 20px;
+}
+main.container section.button-map .primary-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+main.container section.button-map .primary-btn:hover {
+  background-color: #3d8b40;
+}
+main.container section.button-map .secondary-btn {
+  background-color: #2196F3;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+main.container section.button-map .secondary-btn:hover {
+  background-color: #0c7cd5;
+}
+main.container section.button-map .danger-btn {
+  background-color: #F44336;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+main.container section.button-map .danger-btn:hover {
+  background-color: #ea1c0d;
+}
+main.container section.scope-example {
+  margin-top: 20px;
+}
+main.container section.scope-example .child {
+  padding: 10px;
+  border: 1px solid #2196F3;
+  background-color: #b2dbfb;
+  color: #0960a5;
+}
+main.container section.comment-example {
+  margin-top: 20px;
+}
+main.container section.comment-example p {
+  font-style: italic;
+  color: #000000;
+}

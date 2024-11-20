@@ -1,0 +1,103 @@
+// Variables for theme colors
+@primary-color: #4CAF50;
+@secondary-color: #2196F3;
+@danger-color: #F44336;
+@background-color: #f4f4f9;
+@text-color: #333;
+
+// Mixin for button styles
+.button-styles(@bg-color, @text-color) {
+  background-color: @bg-color;
+  color: @text-color;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: darken(@bg-color, 10%);
+  }
+}
+
+// General styles
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: @background-color;
+  color: @text-color;
+}
+
+header.nav {
+  background-color: @primary-color;
+  padding: 10px;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+
+    li {
+      color: white;
+      font-weight: bold;
+    }
+  }
+}
+
+main.container {
+  padding: 20px;
+
+  section.box {
+    border: 1px solid @primary-color;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: lighten(@primary-color, 40%);
+  }
+
+  section.theme {
+    margin-top: 20px;
+
+    .button {
+      .button-styles(@secondary-color, white);
+    }
+  }
+
+  section.button-map {
+    margin-top: 20px;
+
+    .primary-btn {
+      .button-styles(@primary-color, white);
+    }
+
+    .secondary-btn {
+      .button-styles(@secondary-color, white);
+    }
+
+    .danger-btn {
+      .button-styles(@danger-color, white);
+    }
+  }
+
+  section.scope-example {
+    margin-top: 20px;
+
+    .child {
+      padding: 10px;
+      border: 1px solid @secondary-color;
+      background-color: lighten(@secondary-color, 30%);
+      color: darken(@secondary-color, 20%);
+    }
+  }
+
+  section.comment-example {
+    margin-top: 20px;
+
+    p {
+      font-style: italic;
+      color: darken(@text-color, 20%);
+    }
+  }
+}
