@@ -1,0 +1,59 @@
+.transition {
+  width: 100px;
+  height: 50px;
+  background: rgb(16, 197, 230);
+  transition: width 2s;
+  display: flex;
+  align-items: center;
+}
+.transition:hover {
+    width: 300px;
+}
+.multi-transition {
+    width: 100px;
+    height: 100px;
+    background: rgb(16, 197, 230);
+    transition: width 2s, height 4s;
+    display: flex;
+    align-items: center;
+  }
+  
+  .multi-transition:hover {
+    width: 300px;
+    height: 300px;
+  }
+  p{
+    top: 10px;
+  }
+  .speed-curve{
+    width: 100px;
+    height: 100px;
+    background: rgb(16, 197, 230);
+    transition: width 2s;
+    display: flex;
+    align-items: center;
+  }
+  
+  #div1 {transition-timing-function: linear;}
+  #div2 {transition-timing-function: ease;}
+  #div3 {transition-timing-function: ease-in;}
+  #div4 {transition-timing-function: ease-out;}
+  #div5 {transition-timing-function: ease-in-out;}
+  
+  .speed-curve:hover {
+    width: 300px;
+  }
+  .transform {
+    width: 100px;
+    height: 100px;
+    background: rgb(16, 197, 230);
+    transition: width 2s, height 2s, transform 2s;
+    display: flex;
+    align-items: center;
+  }
+  
+  .transform:hover {
+    width: 300px;
+    height: 300px;
+    transform: rotate(180deg);
+  }
