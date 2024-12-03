@@ -5,14 +5,14 @@
 
 @keyframes colorChangePercentage {
     0%   {background-color: red;}
-    25%  {background-color: yellow;}
+    25%  {background-color: var(--yellow);}
     50%  {background-color: blue;}
     100% {background-color: green;}
 }
 
 @keyframes animation {
     0%   {background-color:red; left:0px; top:0px;}
-    25%  {background-color:yellow; left:200px; top:0px;}
+    25%  {background-color: var(--yellow); left:200px; top:0px;}
     50%  {background-color:blue; left:200px; top:200px;}
     75%  {background-color:green; left:0px; top:200px;}
     100% {background-color:red; left:0px; top:0px;}
@@ -21,6 +21,10 @@
 @keyframes animation-timing {
     from {left: 0px;}
     to {left: 500px;}
+}
+
+:root {
+    --yellow: #ffff00
 }
 
   #key-div1{
@@ -54,9 +58,10 @@
     animation-direction: alternate;
 }
 .animation-timing {
+    --yellow: rgb(180, 245, 30); /*local variable- overrides the value of global variable*/
     width: 100px;
     height: 50px;
-    background-color: rgb(180, 245, 30);
+    background-color: var(--yellow);
     font-weight: bold;
     position: relative;
     animation: animation-timing 5s;
